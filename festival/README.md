@@ -12,11 +12,11 @@
 古典的な3DダンジョンRPG(ウィザードリィ風)の探索を擬似的に体験できます。画面上のボタンでプレイヤーの方向転換や前進を操作し、前方の壁の確保を確認できます。画面下部にある2Dミニマップで自分の歩行とゴールまでの経路を入力して確認できます。
 ## 画面
 
-![アプリの画面](Title.jpeg) 
-![アプリの画面](KeyBox.jpeg) 
-![アプリの画面](battle.jpeg) 
-![アプリの画面](Cut-in.jpeg) 
-![アプリの画面](RamdomStage.jpeg) 
+<img src="Title.jpeg" alt="タイトル画面" width="240">
+<img src="KeyBox.jpeg" alt="鍵と宝箱の画面" width="240">
+<img src="battle.jpeg" alt="戦闘画面" width="240">
+<img src="Cut-in.jpeg" alt="カットイン画面" width="240">
+<img src="RamdomStage.jpeg" alt="ランダムステージ画面" width="240">
 
 ## 使った文法・技術
 
