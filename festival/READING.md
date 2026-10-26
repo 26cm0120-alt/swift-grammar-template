@@ -13,11 +13,16 @@
 ## 箇所1：（例：宝箱に入れるか確認する処理）
 
 ```swift
-struct KeyEvent: TileEvent {
-    func blockReason(state: GameState) -> String? {
-        guard state.requiresSwordForKey, !state.hasSword else { return nil }
-        return "宝箱は固く閉ざされている。鍵を取るには剣が必要だ。"
+struct SwordEvent: TileEvent {
+    func onEnter(state: inout GameState, from previousPosition: GridPos) {
+        if state.hasSword {
+            state.message = "剣を装備している。"
+            return
+        }
+        state.hasSword = true
+        state.message = "剣を手に入れた！攻撃力が上がった！"
     }
+}
 ```
 
 **何をしているか：**
