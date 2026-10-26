@@ -31,6 +31,7 @@
 ## 使った文法・技術
 
 （例：`@State`、`List`、`ForEach`、構造体、配列の `append` と `remove`）
+　guard文とOptional型
 
 ## 生成AIの使い方（どの場面で、どう使ったか）
 
