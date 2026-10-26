@@ -38,17 +38,18 @@ GameStateを更新できなかったら、イベント管理ができてない�
 
 ---
 
-## 箇所2：（見出し）
+## 箇所2：（鍵を取得する前の状態を保存し、初回取得かどうかによってチュートリアルとメッセージを変更している）
 
 ```swift
-struct SwordEvent: TileEvent {
-    func onEnter(state: inout GameState, from previousPosition: GridPos) {
-        if state.hasSword {
-            state.message = "剣を装備している。"
-            return
+ func onEnter(state: inout GameState, from previousPosition: GridPos) {
+        let alreadyHadKey = state.hasKey
+        state.hasKey = true
+        if !alreadyHadKey && (state.tutorialStep == .findKey || state.tutorialStep == .zoomMap) {
+            state.tutorialStep = .reachGoal
+            state.message = "鍵を手に入れた！ゴールを探そう！"
+        } else {
+            state.message = alreadyHadKey ? "空の宝箱がある" : "鍵を手に入れた"
         }
-        state.hasSword = true
-        state.message = "剣を手に入れた！攻撃力が上がった！"
     }
 }
 ```
