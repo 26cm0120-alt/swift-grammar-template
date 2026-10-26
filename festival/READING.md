@@ -41,7 +41,16 @@ GameStateを更新できなかったら、イベント管理ができてない�
 ## 箇所2：（見出し）
 
 ```swift
-// コードを貼る
+struct SwordEvent: TileEvent {
+    func onEnter(state: inout GameState, from previousPosition: GridPos) {
+        if state.hasSword {
+            state.message = "剣を装備している。"
+            return
+        }
+        state.hasSword = true
+        state.message = "剣を手に入れた！攻撃力が上がった！"
+    }
+}
 ```
 
 **何をしているか：**
