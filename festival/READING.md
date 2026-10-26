@@ -64,7 +64,19 @@ struct SwordEvent: TileEvent {
 ## 箇所3：（見出し）
 
 ```swift
-// コードを貼る
+struct GoalEvent: TileEvent {
+    func blockReason(state: GameState) -> String? {
+        // 鍵が必要な面で、鍵を持っていないときだけ入れない
+        if state.requiresKey && !state.hasKey {
+            return "ゴールの扉には鍵が必要です。まず鍵を探しましょう。"
+        }
+        return nil
+    }
+
+    func onEnter(state: inout GameState, from previousPosition: GridPos) {
+        state.isCleared = true      // クリア状態にする(仕様書§3・§11)
+        state.message = "ゴール!"
+    }
 ```
 
 **何をしているか：**
