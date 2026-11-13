@@ -49,7 +49,7 @@ for (names, score) in scoreOf {
 }
 ```
 **使ったプロンプト：**
-
+scoreOf を回して、80点以上の人数を highScorers に入れる 
 **AIの出力から自分が変えた点：**
 
 **自分の言葉での説明（何を受け取り、何をして、何を返す）：**
@@ -68,6 +68,7 @@ print("合計：\(total)")
 print("平均：\(average)")
 ```
 **使ったプロンプト：**
+scores の合計を total に、平均を average に入れる
 
 **AIの出力から自分が変えた点：**
 
