@@ -17,7 +17,7 @@
 ### 演習1：（演習の名前）
 ```swift
 for i in 0..<names.count {
-    if scores[i] >= passingScore {
+    if scores[i] >= 60 {
         passers.append(names[i])
     }
 }
@@ -42,7 +42,7 @@ for i in 0..<names.count {
 
 ### 演習2：（演習の名前）
 ```swift
-for (name, score) in scoreOf {
+for (names, score) in scoreOf {
     if score >= 80 {
         highScorers += 1
     }
@@ -63,6 +63,9 @@ for score in scores {
 }
 
 average = Double(total) / Double(scores.count)
+
+print("合計：\(total)")
+print("平均：\(average)")
 ```
 **使ったプロンプト：**
 
