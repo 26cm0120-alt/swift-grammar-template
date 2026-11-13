@@ -140,13 +140,14 @@ check("演習1 並び順は names のまま", passers == ["電子太郎", "山�
 var highScorers = 0
 // ここに書く
 
-for (names, score) in scoreOf {
+for (_, score) in scoreOf {
     if score >= 80 {
         highScorers += 1
     }
 }
 
 print(highScorers)
+
 check("演習2 80点以上は2名", highScorers == 2)
 
 // 演習3: scores の合計を total に、平均を average に入れてください
