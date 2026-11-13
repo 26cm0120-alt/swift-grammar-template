@@ -15,7 +15,13 @@
 ## 2. 演習の記録（4点セット）
 
 ### 演習1：（演習の名前）
-
+```swift
+for i in 0..<names.count {
+    if scores[i] >= passingScore {
+        passers.append(names[i])
+    }
+}
+```
 **使ったプロンプト：**
 （生成AIに入力した文をそのまま貼る。自分で書いた場合は「自分で書いた」と書く）
 
@@ -35,7 +41,13 @@
 例：「`filter` の行を消したら奇数も2乗されて `[1, 4, 9, 16]` になった。`% 2 == 0` を `% 2 == 1` にしたら奇数だけになった」
 
 ### 演習2：（演習の名前）
-
+```swift
+for i in 0..<names.count {
+    if scores[i] >= passingScore {
+        passers.append(names[i])
+    }
+}
+```
 **使ったプロンプト：**
 
 **AIの出力から自分が変えた点：**
