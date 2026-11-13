@@ -1,5 +1,3 @@
-// week01 の演習を終えた main.swift を、このファイルに Upload files で上書きしてください。
-// 教材コードは swift-grammar-code の week01/main.swift を Raw 表示から全選択コピーして Xcode に貼ります。
 // week01: 型と制御構文の再確認、配列・辞書・範囲
 // このプログラムは、1CM1 の成績を並べ替えたり、合格した人を数えたり、
 // 名前から点数を引いたりします。
@@ -126,11 +124,14 @@ for (name, score) in scoreOf {
 
 var passers: [String] = []
 // ここに書く
+
 for i in 0..<names.count {
-    if scores[i] >= passingScore {
+    if scores[i] >= 60 {
         passers.append(names[i])
     }
 }
+
+print(passers)
 check("演習1 合格者は4名", passers.count == 4)
 check("演習1 並び順は names のまま", passers == ["電子太郎", "山田一郎", "佐藤みなみ", "グエン・アン"])
 
@@ -138,11 +139,14 @@ check("演習1 並び順は names のまま", passers == ["電子太郎", "山�
 
 var highScorers = 0
 // ここに書く
-for (name, score) in scoreOf {
+
+for (names, score) in scoreOf {
     if score >= 80 {
         highScorers += 1
     }
 }
+
+print(highScorers)
 check("演習2 80点以上は2名", highScorers == 2)
 
 // 演習3: scores の合計を total に、平均を average に入れてください
@@ -151,11 +155,16 @@ check("演習2 80点以上は2名", highScorers == 2)
 var total = 0
 var average = 0.0
 // ここに書く
+
 for score in scores {
     total += score
 }
 
 average = Double(total) / Double(scores.count)
+
+print("合計：\(total)")
+print("平均：\(average)")
+
 check("演習3 合計は360", total == 360)
 check("演習3 平均は72.0", average == 72.0)
 
@@ -176,3 +185,29 @@ check("演習3 平均は72.0", average == 72.0)
 //  多分岐            switch (x) { case 1: ... break; }   switch x { case 1: ... }
 //                    break を書かないと次に落ちる           break は不要。網羅していないとエラー
 //  暗黙の型変換       int から double は自動               自動変換なし。Double(n) と書く
+
+var failcount =  0
+for score in scores {
+    if score < 60 {
+        failcount += 1
+    }
+}
+print(failcount)   // 1
+
+var lowCount = 0
+for (name,score) in scoreOf {
+    if score < 70 {
+        print(name)
+        lowCount += 1
+    }
+}
+print(lowCount)   // 2
+
+let absenses = [0,2,1,5,0]
+var absensesTotal = 0
+for absence in absenses {
+    absensesTotal += absence
+}
+let absensesAverage = Double(absensesTotal) / Double(absenses.count)
+
+print(absensesTotal,absensesAverage)   // 8 1.6
