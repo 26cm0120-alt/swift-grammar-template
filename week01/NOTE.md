@@ -79,7 +79,7 @@ scores の合計を total に、平均を average に入れる
 
 ## 3. AI質問ログ
 
-使った生成AI：（例：ChatGPT 無料版、Xcode の ChatGPT、Claude 無料版）
+使った生成AI：ChatGPT 無料版
 
 ### Q1
 
