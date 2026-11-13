@@ -40,11 +40,11 @@ for i in 0..<names.count {
 
 例：「`filter` の行を消したら奇数も2乗されて `[1, 4, 9, 16]` になった。`% 2 == 0` を `% 2 == 1` にしたら奇数だけになった」
 
-### 演習3：（演習の名前）
+### 演習2：（演習の名前）
 ```swift
-for i in 0..<names.count {
-    if scores[i] >= passingScore {
-        passers.append(names[i])
+for (name, score) in scoreOf {
+    if score >= 80 {
+        highScorers += 1
     }
 }
 ```
@@ -56,13 +56,13 @@ for i in 0..<names.count {
 
 **壊す実験（何を変えたら、何が起きたか）：**
 
-### 演習2：（演習の名前）
+### 演習3：（演習の名前）
 ```swift
-for i in 0..<names.count {
-    if scores[i] >= passingScore {
-        passers.append(names[i])
-    }
+for score in scores {
+    total += score
 }
+
+average = Double(total) / Double(scores.count)
 ```
 **使ったプロンプト：**
 
