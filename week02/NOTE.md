@@ -3,7 +3,7 @@
 > **氏名：** 竹岡修一
 > **最終更新：** 2026-11-16
 > **AI利用レベル：** 演習は 2（生成コード可・4点セット必須）
-> **リファレンス：** swift-grammar-code の [`reference/02_basics.md`](https://github.com/NakasenJEC/swift-grammar-code/blob/main/reference/02_basics.md)
+> **リファレンス：** swift-grammar-code の [`reference/02_optional.md`](https://github.com/NakasenJEC/swift-grammar-code/blob/main/reference/02_optional.md)
 
 
 ---
